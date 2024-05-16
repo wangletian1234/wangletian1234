@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>测试js函数在html运行</title>
+    <link rel="stylesheet" type="text/css" href="css/wang.css" />
+  </head>
+  <body>
+    <h1 id="titel">函数测试的测试画面</h1>
+    <h2 id="info">下面用于测试各种js的调用功能</h2>
+    <h3 id="timer">这里用于显示时钟</h3>
+    <!-- 定义了两个个显示元素，id是sub_mesg，sub_mesg_a后面数据在它里面显示。只要是有innerHTML属性的都可以 -->
+    <h2 id="sub_mesg">等待数据...</h2>
+    <h2 id="sub_mesg_a">等待数据...</h2>
+
+    <!-- 引入MQTT.js库 -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <!-- 引入fuc_test.js库 -->
+    <script src="/js/fuc_test.js"></script>
+  </body>
+</html>
