@@ -13,17 +13,17 @@ body {
 
 /*主题部分*/
 #titel {
-  background-color: yelow; /* 修改背景色 */
+  background-color: white; /* 修改背景色 */
   color: black; /* 修改字体色 */
   font-size: 40px /* 修改字体大小 */
 }
 #info {
-  background-color: yelow; /* 修改背景色 */
-  color: red;
+  background-color: white; /* 修改背景色 */
+  color: blue;
 }
 #sub_mesg {
-  background-color: blue; /* 修改背景色 */
+  background-color: yellow; /* 修改背景色 */
 }
 #sub_mesg_a {
-  background-color: red; /* 修改背景色 */
+  background-color: yellow; /* 修改背景色 */
 }
