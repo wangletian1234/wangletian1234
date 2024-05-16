@@ -8,21 +8,20 @@
   <body>
     <h1 id="titel">mqtt消息的测试画面</h1>
     <h2 id="info">这是一个订阅发布mqtt消息的测试画面，定义了javascrip调用在线的mqtt.min.js库，实现订阅消息，并把消息在网页显示</h2>
-    <h3 id="couter">这是一个计数值</h2>
-    <img src="/img/01.jpg" alt="Example Image">
+    <h3 id="timer">这里用于显示时钟</h3>
     <!-- 定义了两个个显示元素，id是sub_mesg，sub_mesg_a后面订阅到的数据在它里面显示。只要是有innerHTML属性的都可以 -->
     <h2 id="sub_mesg">等待数据...</h2>
     <h2 id="sub_mesg_a">等待数据...</h2>
+    <img id="myimg" src="/img/01.jpg" alt="Example Image">
     <!-- 引入MQTT.js库 -->
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script>
-      //周期刷新显示内容
+      //周期刷新显示内容测试，下面以显示实时时钟为例，主要用到setInterval函数。
       var myVar = setInterval(function(){ myTimer() }, 1000);
- 
       function myTimer() {
-      var d = new Date();
-      var t = d.toLocaleTimeString();
-      document.getElementById("couter").innerHTML = t;
+          var d = new Date();
+          var t = d.toLocaleTimeString();
+          document.getElementById("timer").innerHTML = t;
       }
       // 创建MQTT客户端
       const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
