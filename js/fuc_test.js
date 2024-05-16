@@ -5,7 +5,7 @@ function myTimer() {
 var d = new Date();
 var t = d.toLocaleTimeString();
 document.getElementById("timer").innerHTML = t;
-
+}
 // 创建MQTT客户端
 const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
 // 订阅主题，下面主题可以修改为你需要的。
