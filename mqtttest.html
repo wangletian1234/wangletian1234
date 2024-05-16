@@ -16,7 +16,7 @@
       // 监听消息到达事件
       client.on('message', function (topic, message) {
         // 将接收到的消息显示在页面上
-        document.getElementById('ss').innerHTML = `温湿度：${message.toString()}`;
+        document.getElementById('ss').innerHTML = `订阅到的信息是：${message.toString()}`;
       });
     </script>
   </body>
