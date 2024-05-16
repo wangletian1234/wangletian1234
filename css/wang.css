@@ -1,5 +1,5 @@
 *{ margin: 0; padding: 0; font-family: "微软雅黑"}
-body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 40px; font-weight: normal;}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 10px; font-weight: normal;}
 
 <!-- 注意！下方引用的是存储在网络，而非项目文件夹内的背景图片文件 -->
 body {	
