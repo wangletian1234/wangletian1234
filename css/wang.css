@@ -1,11 +1,11 @@
 *{ margin: 0; padding: 0; font-family: "微软雅黑"}
-body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 14px; font-weight: normal;}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { margin: 0px; padding: 0px; font-size: 20px; font-weight: normal;}
 img { border-style: none;}
 li{ list-style: none; float: left}
 a{ text-decoration: none}
 <!-- 注意！下方引用的是存储在网络，而非项目文件夹内的背景图片文件 -->
 body {	
-	background-image: ./img/01.jpg;
+	background-image: url(../img/01.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -13,16 +13,17 @@ body {
 
 /*主题部分*/
 #titel {
-  background-color: green; /* 初始背景色为绿色 */
-  color: #666666;
+  background-color: yelow; /* 修改背景色 */
+  color: black; /* 修改字体色 */
+  font-size: 40px /* 修改字体大小 */
 }
 #info {
-  background-color: green; /* 初始背景色为绿色 */
+  background-color: yelow; /* 修改背景色 */
   color: red;
 }
 #sub_mesg {
-  background-color: blue; /* 初始背景色为蓝色 */
+  background-color: blue; /* 修改背景色 */
 }
 #sub_mesg_a {
-  background-color: red; /* 初始背景色为红色 */
+  background-color: red; /* 修改背景色 */
 }
