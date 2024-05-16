@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>EMQX WebSocket Subscription</title>
-    <script type="text/javascript">
-        var ws = new WebSocket('ws://your_emqx_host:port/mqtt'); // 替换为你的EMQX服务器地址和端口
- 
-        ws.onopen = function() {
-            console.log('WebSocket connected!');
-            // 发送订阅消息
-            var subscribeMessage = {
-                "action": "subscribe",
-                "topic": "wangletian1234/ipv6" // 替换为你要订阅的主题
-            };
-            ws.send(JSON.stringify(subscribeMessage));
-        };
- 
-        ws.onmessage = function(event) {
-            console.log('Message from server:', event.data);
-        };
- 
-        ws.onerror = function(error) {
-            console.log('WebSocket error:', error);
-        };
- 
-        ws.onclose = function() {
-            console.log('WebSocket disconnected');
-        };
+  <head>
+    <meta charset="UTF-8">
+    <title>订阅主题</title>
+  </head>
+  <body>
+    <h2 id="ss">等待数据...</h2>
+    <!-- 引入MQTT.js库 -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script>
+      // 创建MQTT客户端
+      const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
+      // 订阅主题
+      client.subscribe('wangletian1234/ipv6');
+      // 监听消息到达事件
+      client.on('message', function (topic, message) {
+        // 将接收到的消息显示在页面上
+        document.getElementById('ss').innerHTML = `温湿度：${message.toString()}`;
+      });
     </script>
-</head>
-<body>
-    <h1>EMQX WebSocket Subscription Example</h1>
-</body>
+  </body>
 </html>
