@@ -2,9 +2,9 @@
 //周期刷新显示内容测试，下面以显示实时时钟为例，主要用到setInterval函数。
 var myVar = setInterval(function(){ myTimer() }, 1000);
 function myTimer() {
-var d = new Date();
-var t = d.toLocaleTimeString();
-document.getElementById("timer").innerHTML = t;
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("timer").innerHTML = t;
 }
 // 创建MQTT客户端
 const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
